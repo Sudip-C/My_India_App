@@ -1,29 +1,40 @@
 import React, { useEffect, useState } from 'react'
-import {useDispatch,useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import { GetData } from '../redux/action'
+import { ProductCard } from '../components/ProductCard';
 
 export const ProductPage = () => {
-    const [ProductData,setProductData]=useState([])
     const dispatch=useDispatch()
     const Data=useSelector((d)=>(d.data))
-     console.log(Data)
 
 
-
-
+    const [items,setItems]=useState([])
+    const [savedItems,setSavedItems]=useState([])
     useEffect(()=>{
-        dispatch(GetData)
+        dispatch(GetData)     
     },[])
 
+    useEffect(()=>{
+      const saved=JSON.parse(localStorage.getItem('cart'))
+        setSavedItems(saved)
+    },[items])
+  
+
+    const addtoCart =(e)=>{
+      const itemExists=savedItems?.some(el=>el.id===e.id)
+      if(!itemExists){
+        let SingleItem=e
+      let cartItems=[...items,SingleItem]
+      setItems(cartItems)
+      localStorage.setItem("cart",JSON.stringify(cartItems))
+      }else{
+        alert("Item already in cart!!!")
+      }
+    }
+
   return (
-    <div className='grid grid-cols-4 p-2 justify-items-center'>
-    {Data?.map((e)=>(
-        <div key={e.id} className='border-black border-2 m-2'>
-        <img className='w-40' src={e.image} alt={e.title}/>
-            <h1>{e.title}</h1>
-        </div>
-    ))}
-    
+    <div>
+    <ProductCard visibilty={true} Data={Data} addtoCart={addtoCart}/>
     </div>
   )
 }
