@@ -27,6 +27,7 @@ export const ProductPage = () => {
       let cartItems=[...items,SingleItem]
       setItems(cartItems)
       localStorage.setItem("cart",JSON.stringify(cartItems))
+      alert("Item added to cart.")
       }else{
         alert("Item already in cart!!!")
       }
