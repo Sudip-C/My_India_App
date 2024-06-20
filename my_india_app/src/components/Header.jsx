@@ -8,13 +8,13 @@ export const Header = () => {
     className='border-2 border-black p-5 mb-4  flex justify-between '
     >
     <div className=' w-1/3 flex justify-center'>
-        <h1>MY INDIA</h1>
+        <h1 className='font-bold text-lg '>MY INDIA</h1>
     </div>
     <div
     className='flex justify-evenly  w-1/2  items-center '
     >
-        <Navlink to='/'><h2>Products</h2></Navlink>
-        <Navlink to='/cart'><FiShoppingCart /></Navlink>
+        <Navlink to='/'><h2 className='font-bold'>Products</h2></Navlink>
+        <Navlink to='/cart' ><FiShoppingCart/></Navlink>
     </div>
 
     </div>
