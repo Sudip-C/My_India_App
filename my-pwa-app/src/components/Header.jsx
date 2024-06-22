@@ -10,15 +10,15 @@ export const Header = () => {
   },[itemCount])
   return (
     <div
-    className=' sticky top-0 bg-blue-200 border-2 border-black p-5 mb-4  flex justify-between '
+    className=' sticky top-0 bg-blue-200 shadow-lg p-5 mb-4  flex justify-between '
     >
-    <div className=' w-1/3 flex justify-center'>
-        <h1 className='font-bold text-lg '>MY INDIA</h1>
+    <div className='  rounded-lg w-1/6 p-1 ml-2  flex justify-center md:w-1/4 sm:w-1/3'>
+        <h1 className='font-bold text-3xl  '>MY INDIA</h1>
     </div>
     <div className='flex justify-evenly  w-1/2  items-center '>
-        <Navlink to='/'><h2 className='font-bold'>Products</h2></Navlink>
-        <div className=' p-2  justify-center items-center'> 
-        <Navlink to='/cart'><FiShoppingCart/></Navlink>
+        <Navlink to='/'><h2 className='font-bold text-xl p-2 rounded-lg hover:bg-white  hover:shadow-lg'>Products</h2></Navlink>
+        <div className=' justify-center items-center p-2 rounded-lg hover:bg-white hover:shadow-lg'> 
+        <Navlink to='/cart'><FiShoppingCart className='w-10'/></Navlink>
         </div>
     </div>
 

@@ -4,7 +4,7 @@ import { Allroutes } from './components/Allroutes';
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col justify-between" >
      <Header/>
      <Allroutes/>
      <Footer/>

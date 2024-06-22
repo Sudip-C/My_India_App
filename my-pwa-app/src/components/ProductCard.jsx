@@ -15,8 +15,7 @@ export const ProductCard = ({visibility,Data,addtoCart,deleteFromCart}) => {
           <h3 className={`font-medium text-gray-600 ${visibility === false ? 'hidden' : ''}`}>{e.description.slice(0, 50)}...</h3>
           {visibility === false ? (
             <button onClick={() => deleteFromCart(e)} className='border-2 border-red-500 text-red-500 px-5 py-2 my-2 rounded-md flex items-center justify-center'>
-              <MdDeleteOutline />
-              <span className='ml-2'>Remove</span>
+              <MdDeleteOutline />              
             </button>
           ) : (
             <button onClick={() => addtoCart(e)} className='border-2 border-green-500 text-green-500 px-5 py-2 my-2 rounded-md flex items-center justify-center'>
