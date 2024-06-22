@@ -1,6 +1,6 @@
 # My_India_App
 
-Welcome to my app. This is small shooping app that I created in one day. I have used React and also Redux for better data management and tailwind css for all the design and responsivenss.
+Welcome to my app. This is small shoping app that I created in one day. I have used React and also Redux for better data management and tailwind css for all the design and responsivenss.
 It has two pages
 1.Product Listing Page
 2. Cart Page
