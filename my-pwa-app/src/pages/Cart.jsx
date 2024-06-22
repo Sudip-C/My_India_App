@@ -4,7 +4,7 @@ import {Link as NavLink} from 'react-router-dom'
 export const Cart = () => {
   const [ItemList,setItemList]=useState([])
   useEffect(()=>{
-    const CartItemList=JSON.parse(localStorage.getItem("cart"))
+    const CartItemList=JSON.parse(localStorage.getItem("cart"))||[]
     setItemList(CartItemList)
     
   },[]);
@@ -23,14 +23,14 @@ const deleteFromCart=(e)=>{
 
   return (
     ItemList?.length === 0 ? 
-      <div className='flex flex-col mb-5 h-screen items-center justify-center'>
+      (<div className='flex flex-col mb-5 h-screen items-center justify-center'>
         <h1 className='font-bold text-3xl text-center'>Nothing in this cart!!</h1>
         <NavLink to='/' className='border-2 border-blue-600 m-2 p-2 rounded-xl'>
           <button className='text-blue-600 font-bold'>Continue shopping</button>
         </NavLink>
-      </div>
+      </div>)
      : 
-      <div className='  flex flex-col md:flex-row content-center items-start'>
+      (<div className='  flex flex-col md:flex-row content-center items-start'>
         <div className='w-full  p-3 lg:w-1/2'>
           <ProductCard visibility={false} Data={ItemList} deleteFromCart={deleteFromCart} />
         </div>
@@ -43,7 +43,7 @@ const deleteFromCart=(e)=>{
             </button>
           </div>
         </div>
-      </div>
+      </div>)
     
     
   )
