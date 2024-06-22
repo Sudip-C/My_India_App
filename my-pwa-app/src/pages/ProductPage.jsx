@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { GetData } from '../redux/action'
 import { ProductCard } from '../components/ProductCard';
+import { Shimmer } from '../components/Shimmer';
 
 export const ProductPage = () => {
     const dispatch=useDispatch()
     const Data=useSelector((d)=>(d.data))
+    const Loading=useSelector((load)=>(load.isLoading))
 
+   
 
     const [items,setItems]=useState([])
     const [savedItems,setSavedItems]=useState([])
@@ -34,6 +37,7 @@ export const ProductPage = () => {
     }
 
   return (
+    Loading?<Shimmer/>:
     <div>
     <ProductCard visibilty={true} Data={Data} addtoCart={addtoCart}/>
     </div>

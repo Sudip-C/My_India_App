@@ -7,7 +7,7 @@ export const ProductCard = ({visibility,Data,addtoCart,deleteFromCart}) => {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2 justify-items-center'>
     {Data?.map((e) => (
-      <div key={e.id} className='border-gray border-2 m-2 rounded-lg w-full max-w-xs'>
+      <div key={e.id} className='border-gray border-2 m-2 hover:shadow-lg rounded-lg w-full max-w-xs'>
         <img className='rounded-t-lg w-full h-48 object-cover' src={e.image} alt={e.title} />
         <div className='p-2'>
           <h1 className='font-bold text-lg'>{e.title}</h1>
