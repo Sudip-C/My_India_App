@@ -1,3 +1,3 @@
 # My_India_App
 
-# Deployed link: https://myapppwa.netlify.app
+# Deployed link: https://myapppwa.netlify.app/
