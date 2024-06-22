@@ -11,7 +11,7 @@ This app is deployed in Netlify. This whole app is responsive for all devices.
 # Navbar :
 ![Screenshot (4)](https://github.com/Sudip-C/My_India_App/assets/110247476/8d7013b0-0267-4bcd-8526-ef7afe1514eb)
 
-#Footer :
+# Footer :
 ![Screenshot (3)](https://github.com/Sudip-C/My_India_App/assets/110247476/d2adb0e0-9277-453f-a79e-c79087296fc1)
 
 
